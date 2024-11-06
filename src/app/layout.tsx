@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
 
 import { cn } from '@/lib/utils';
@@ -19,6 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="6a512edd-f989-41d9-92eb-39bc0c620286"
+          data-blockingmode="auto"
+          type="text/javascript"
+        ></Script>
+      </head>
       <body className={cn(inter.className, 'antialiased min-h-screen')}>
         {children}
       </body>
